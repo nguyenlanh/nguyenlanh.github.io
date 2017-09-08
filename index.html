@@ -26,6 +26,8 @@
 
     <!-- Theme CSS -->
     <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/style_contact_form.css" rel="stylesheet">
+    <link href="css/style_notification_box.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,6 +35,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -100,7 +105,7 @@
                                     <i class="icon-notebook text-primary"></i>
                                     <h3>Python <br/>Core Libraries</h3>
                                     <p class="text-muted">(Phần 1)</p>
-                                    <i class="icon-arrow-right-circle"></i>
+                                    <a class="btn btn-primary view-pdf" href="data/python/python_for_datascience_part1.pdf">Xem</a>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -108,6 +113,7 @@
                                     <i class="icon-graph text-primary"></i>
                                     <h3>Python <br/>Visualization</h3>
                                     <p class="text-muted">(Phần 2)</p>
+                                    <btn class="btn btn-default view-pdf" onclick="showNotification('green')">Xem</btn>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -115,6 +121,7 @@
                                     <i class="icon-layers text-primary"></i>
                                     <h3>Python <br/>Artificial Intelligence</h3>
                                     <p class="text-muted">(Phần 3)</p>
+                                    <btn class="btn btn-default view-pdf" onclick="showNotification('green')">Xem</btn>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -122,19 +129,64 @@
                                     <i class="icon-equalizer text-primary"></i>
                                     <h3>Python <br/>Data Mining - Statictis</h3>
                                     <p class="text-muted">(Phần 4)</p>
+                                    <btn class="btn btn-default view-pdf" onclick="showNotification('green')">Xem</btn>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!--notification box-->
+        <div id="notification" class="notification">
+          <div class="win8-notif-body">
+            <div class="mid">
+              <h3>Thông báo</h3>
+              <p>Bài viết đang được cập nhật!</p>
+              <button class="btn btn-default win8-notif-button">Cancel</button>
+            </div>
+          </div>
         </div>
     </section>
 
-    <div class="row">
-         <div id="viewer" class="pdf-viewer" data-url="sample.pdf"></div>
-    </div>
+
+    <section id="contact">
+       <div class="section-content">
+         <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+         <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+       </div>
+       <div class="contact-section">
+       <div class="container">
+         <form>
+           <div class="col-md-6 form-line">
+               <div class="form-group">
+                 <label for="exampleInputUsername">Your name</label>
+                 <input type="text" class="form-control" id="" placeholder=" Enter Name">
+               </div>
+               <div class="form-group">
+                 <label for="exampleInputEmail">Email Address</label>
+                 <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+               </div>
+               <div class="form-group">
+                 <label for="telephone">Mobile No.</label>
+                 <input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="form-group">
+                 <label for ="description"> Message</label>
+                 <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+               </div>
+               <div>
+
+                 <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+               </div>
+
+           </div>
+         </form>
+       </div>
+     </section>
 
     <footer>
         <div class="container">
@@ -162,6 +214,19 @@
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+    <script type="text/javascript">
+    	var def="black";
+    	function showNotification(color){
+    				$("#notification" ).removeClass(def);
+    				$("#notification" ).addClass(color);
+    				def=color;
+    				$( "#notification" ).fadeIn( "slow" );
+    				//alert('hi');
+    				$(".win8-notif-button").click(function(){
+    		//alert('hi');
+    		$(".notification").fadeOut("slow");
+    	});}
+    </script>
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
 
