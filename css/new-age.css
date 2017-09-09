@@ -151,11 +151,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../img/bg-pattern.png"), #195C93;
+  background:  #195C93;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #195C93, #1F975A);
+  background:  -webkit-linear-gradient(to left, #195C93, #1F975A);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #195C93, #1F975A);
+  background:  linear-gradient(to left, #195C93, #1F975A);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -447,4 +447,55 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+}
+
+
+/* icon profile */
+
+.icon_profile{
+	position: fixed;
+	z-index: 3;
+	bottom: 20%;
+	text-align: center;
+	font-family: sans-serif;
+  width: 10%;
+  height: 10%;
+
+}
+
+.profile-header-container{
+   margin: 0 auto;
+   text-align: center;
+}
+
+.profile-header-img {
+   padding: 54px;
+}
+
+.profile-header-img > img.img-circle {
+   width: 120px;
+   height: 120px;
+   border: 1px solid white;
+}
+
+.profile-header {
+   margin-top: 43px;
+}
+
+/**
+* Ranking component
+*/
+.rank-label-container {
+   margin-top: -22px;
+   margin-left: 50px;
+   /* z-index: 1000; */
+   text-align: center;
+}
+
+.label.label-default.rank-label {
+  background: -webkit-linear-gradient(to left, #195C93, #1F975A);
+  background: linear-gradient(to left, #195C93, #1F975A);
+  padding: 5px 10px 5px 10px;
+  border-radius: 27px;
+  border: 1px solid white;
 }
